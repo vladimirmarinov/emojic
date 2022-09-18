@@ -1,0 +1,88 @@
+📦 files 🏠
+
+🏁 🍇
+  🆕🔡▶️👂🏼❗️ ➡️ file_name
+  🍺📇🐇📄file_name❗️➡️file_bytes
+  🍺🔡file_bytes❗️➡️ file_as_string
+  🎶file_as_string❗️➡️ string_graphemes
+  
+  30000 ➡️ memory_size
+  🆕🍨 💧0❗️memory_size❗️➡️ 🖍🆕memory
+  
+  0 ➡️ 🖍🆕ptr
+  0 ➡️ 🖍🆕i
+  
+  🔁 i ◀ 📏string_graphemes❓🍇
+    🐽string_graphemes i❗️➡️ current_grapheme
+    ↪️ current_grapheme 🙌 🔤➕🔤 🍇
+      🐽memory ptr❗️➕ 1 ➡️🐽memory ptr❗️
+    🍉
+    🙅↪️ current_grapheme 🙌 🔤➖🔤 🍇
+      🐽memory ptr❗️➖ 1 ➡️🐽memory ptr❗️
+    🍉
+    🙅↪️ current_grapheme 🙌 🔤➡️🔤 🍇
+      ↪️ ptr 🙌 memory_size➖1 🍇
+        ptr ⬅️➖ ptr
+      🍉
+      🙅🍇
+        ptr ⬅️➕ 1
+      🍉
+    🍉
+    🙅↪️ current_grapheme 🙌 🔤⬅️🔤 🍇
+      ↪️ ptr 🙌 0 🍇
+        ptr ⬅️➕ memory_size➖1
+      🍉
+      🙅🍇
+        ptr ⬅️➖ 1
+      🍉
+    🍉
+    🙅↪️ current_grapheme 🙌 🔤👂🏼🔤 🍇
+      🆕🔡▶️👂🏼❗️ ➡️ input
+      📇input❗️➡️ input_bytes
+      ☣️ 🍇🐽 input_bytes 0❗️➡️🐽memory ptr❗️🍉
+    🍉
+    🙅↪️ current_grapheme 🙌 🔤😀🔤 🍇
+      ☣️ 🍇🆕🧠 1❗➡️b ✍b 🐽memory ptr❗️0 1❗️🍺🔡🆕📇b 1❗️❗️➡️memory_str 👄memory_str❗️ ♻🐚💧🍆b 0❗️🍉
+    🍉
+    🙅↪️ current_grapheme 🙌 🔤［🔤 🍇
+      0 ➡️ 🖍🆕c
+      
+      ↪️ 🐽memory ptr❗️🙌💧0❗️🍇
+        i ⬅️➕ 1
+        
+        🔁 c ▶ 0 👐 ❎🐽string_graphemes i❗️🙌 🔤］🔤❗️🍇
+          ↪️ 🐽string_graphemes i❗️🙌 🔤［🔤🍇
+            c ⬅️➕ 1
+          🍉
+          🙅↪️ 🐽string_graphemes i❗️🙌 🔤］🔤🍇
+            c ⬅️➖ 1
+          🍉
+          i ⬅️➕ 1
+        🍉
+      🍉
+    🍉
+    🙅↪️ current_grapheme 🙌 🔤］🔤 🍇
+      0 ➡️ 🖍🆕c
+      
+      ↪️ ❎🐽memory ptr❗️🙌💧0❗️❗️🍇
+        i ⬅️➖ 1
+        
+        🔁 c ▶ 0 👐 ❎🐽string_graphemes i❗️🙌 🔤［🔤❗️🍇
+          ↪️ 🐽string_graphemes i❗️🙌 🔤］🔤🍇
+            c ⬅️➕ 1
+          🍉
+          🙅↪️ 🐽string_graphemes i❗️🙌 🔤［🔤🍇
+            c ⬅️➖ 1
+          🍉
+          i ⬅️➖ 1
+        🍉
+        
+        i ⬅️➖ 1
+      🍉
+    🍉
+    
+    i ⬅️➕ 1
+  🍉
+  
+  👄🔤❌n🔤❗️
+🍉

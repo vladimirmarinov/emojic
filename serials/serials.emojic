@@ -1,0 +1,80 @@
+🐇🥪️ 🍇
+  🖍🆕 menu_item_name 🔡
+  🖍🆕 prefix 🔡
+  
+  🆕 🍼 menu_item_name 🔡 🍼 prefix 🔡 🍇🍉
+  
+  ❓ 🌕️ ➡️ 🔡 🍇
+    ↩️ menu_item_name
+  🍉
+  
+  ❓ 🍕️ ➡️ 🔡 🍇
+    ↩️ prefix
+  🍉
+🍉
+  
+🏁 🍇
+  🍿
+    🆕🥪️ 🔤Inverter Venus "7F"🔤 🔤7F🔤❗️
+    🆕🥪️ 🔤Inverter Jupiter "7E"🔤 🔤7E🔤❗️
+    🆕🥪️ 🔤Inverter Super Venus "7C"🔤 🔤7C🔤❗️
+    🆕🥪️ 🔤Inverter Saturn "7F"🔤 🔤7F🔤❗️
+    🆕🥪️ 🔤Inverter Jupiter/Venus /S. Venus Refurbish "BA, BE"🔤 🔤BA🔤❗️
+    🆕🥪️ 🔤Inverter Jupiter Refurbish "BF"🔤 🔤BF🔤❗️
+    🆕🥪️ 🔤Inverter Venus "73"🔤 🔤73🔤❗️
+    🆕🥪️ 🔤SMI "50"🔤 🔤50🔤❗️
+    🆕🥪️ 🔤SMI "69"🔤 🔤69🔤❗️
+    🆕🥪️ 🔤Gateway "6A"🔤 🔤6A🔤❗️
+    🆕🥪️ 🔤Gateway: CCG "67"🔤 🔤67🔤❗️
+    🆕🥪️ 🔤Quad Optimizer (M2640) "302"🔤 🔤302🔤❗️
+    🆕🥪️ 🔤Dual Optimizer (M1600) "303"🔤 🔤303🔤❗️
+    🆕🥪️ 🔤Combi Cabinet "6F"🔤 🔤6F🔤❗️
+    🆕🥪️ 🔤EV Charger "28"🔤 🔤28🔤❗️
+    🆕🥪️ 🔤Optimizers🔤 🔤🔤❗️
+  🍆 ➡️ menu_items
+  
+  🍿
+    🔤0🔤 🔤1🔤 🔤2🔤 🔤3🔤 🔤4🔤 🔤5🔤 🔤6🔤 🔤7🔤 🔤8🔤 🔤9🔤 🔤A🔤 🔤B🔤 🔤C🔤 🔤D🔤 🔤E🔤 🔤F🔤 
+  🍆 ➡️ hex_array
+  
+  🔂 i 🆕⏩ 0 📏menu_items❓❗️ 🍇
+    🐽menu_items i❗️➡️ current_item
+    😀🔤🧲🔡 i➕1❗️🧲. 🧲🌕️current_item❓🧲 ➡️  🧲🍕️current_item❓🧲🔤❗️
+  🍉
+  
+  🆕🔡▶️👂🏼❗️ ➡️ item_index_str
+  🍺🔢item_index_str 10❗️ ➡️ item_index
+  
+  🐽menu_items item_index ➖ 1❗️➡️ selected_item
+  
+  🆕🎰❗️➡️ random_gen
+  📇🍕️selected_item❓❗️➡️ 🖍🆕serial_bytes
+  
+  🔂 i 🆕⏩ 📏🎶🍕️selected_item❓❗️❓ 8❗️ 🍇
+    🔢random_gen 0 15❗️➡️ next_symbol_index
+    🐽hex_array next_symbol_index❗️➡️ next_symbol
+    serial_bytes ➕ 📇next_symbol❗️➡️ 🖍serial_bytes
+  🍉
+  
+  🍺🔡serial_bytes❗️➡️ serial_no_checksum
+  🔪serial_no_checksum 0 2❗️➡️ p1
+  🔪serial_no_checksum 2 2❗️➡️ p2
+  🔪serial_no_checksum 4 2❗️➡️ p3
+  🔪serial_no_checksum 6 2❗️➡️ p4
+  
+  🍺🔢p1 16❗️➕ 🍺🔢p2 16❗️➕ 🍺🔢p3 16❗️➕ 🍺🔢p4 16❗️➡️ checksum_num
+  🔡checksum_num 16❗️➡️ checksum_str
+  📇🔤🔤❗️➡️ 🖍🆕checksum_bytes
+  
+  📏🎶checksum_str❗️❓➡️ checksum_str_length
+  ↪️ checksum_str_length 🙌 1 🍇
+    📇🔤0🔤❗️➕ 📇checksum_str❗️➡️ 🖍checksum_bytes
+  🍉
+  🙅 🍇
+    📇🔪checksum_str checksum_str_length➖2 2❗️❗️➡️ 🖍checksum_bytes
+  🍉
+  
+  serial_bytes ➕ 📇🔤-🔤❗️➕ checksum_bytes ➡️ 🖍serial_bytes
+  
+  😀📫🍺🔡serial_bytes❗️❗️❗️
+🍉
